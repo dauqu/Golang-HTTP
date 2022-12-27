@@ -16,6 +16,13 @@ func main() {
 		})
 	})
 
-	//Run server
-	r.Run(":8080")
+	//print log
+	r.GET("/ping", func(c *gin.Context) {
+		c.String(200, "pong")
+	})
+
+	
+
+	//Run server on port 9000
+	r.Run(":9000")
 }
